@@ -1,4 +1,7 @@
 # Build Real Web App with Remchi
+Based on the AWESOME tutorial-series by Rem Zolotykh
+Youtube link: [Here](https://www.youtube.com/watch?v=NO2DaxhoWHk)
+
 using:
 - React
 - Eslint
@@ -7,11 +10,10 @@ using:
 - validator
 - prop-types@15.6.1
 - Redux
+- redux-thunk
+- redux-devtools-extension
 
 ## Part1 setup react project, eslint, react-router and implement Login Form with client-side validation. 
-
-Based on the AWESOME tutorial-series by Rem Zolotykh
-Youtube link: [Here](https://www.youtube.com/watch?v=NO2DaxhoWHk)
 
 App Component is going to be like a route dispatcher. It is going to render depending on the route. 
 
@@ -80,3 +82,18 @@ With `onSubmit`, first validate the form fields, then call the submit() in the p
   }
 ```
 if `errors` is empty, means there is no error, and proceed to pass `this.state.data` to the parent's submit().
+
+## Part2 
+
+- setup Redux and create our first reducer and thunk action
+- make async request to server
+- setup backend server with ExpressJS and use babel to use latest and greatest JS
+
+To make async request to server, we need Redux Thunk
+
+createStore creates a Redux store, and that is the most important thing, store. 
+applyMiddleware allows us to use thunk and middle ware. 
+provider is a high-order component from react-redux.
+
+rootReducer is the whole TREE, the whole state object.
+
